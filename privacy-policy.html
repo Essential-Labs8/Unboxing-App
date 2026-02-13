@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unboxing - Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fafafa;
+        }
+        h1 { font-size: 2em; margin-bottom: 8px; color: #111; }
+        h2 { font-size: 1.4em; margin-top: 36px; margin-bottom: 12px; color: #222; }
+        h3 { font-size: 1.1em; margin-top: 20px; margin-bottom: 8px; color: #333; }
+        p, li { margin-bottom: 12px; }
+        ul { padding-left: 24px; }
+        .subtitle { color: #666; font-size: 0.95em; margin-bottom: 32px; }
+        .highlight {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 16px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { text-align: left; padding: 10px 14px; border: 1px solid #ddd; }
+        th { background: #f5f5f5; font-weight: 600; }
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #ddd; color: #888; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+<h1>Unboxing — Privacy Policy</h1>
+<p class="subtitle">Last updated: February 14, 2025</p>
+
+<div class="highlight">
+    <strong>Summary:</strong> Unboxing is an offline-first app. Your videos, metadata, and settings stay on your device. We do not collect, transmit, or store any personal data on our servers. We have no servers.
+</div>
+
+<h2>1. Introduction</h2>
+<p>Unboxing ("the App") is developed and published by Essential Labs ("we", "us", "our"). This privacy policy explains what data the App accesses, how it is used, and your rights regarding that data.</p>
+<p>The App helps users record unboxing videos for delivery dispute evidence, with automatic expiry and storage management.</p>
+
+<h2>2. Data We Do NOT Collect</h2>
+<p>We want to be clear about what we do <strong>not</strong> do:</p>
+<ul>
+    <li>We do <strong>not</strong> collect personal information (name, email, address, phone number)</li>
+    <li>We do <strong>not</strong> upload your videos, photos, or recordings to any server</li>
+    <li>We do <strong>not</strong> use analytics or tracking SDKs</li>
+    <li>We do <strong>not</strong> use advertising SDKs</li>
+    <li>We do <strong>not</strong> use crash reporting services</li>
+    <li>We do <strong>not</strong> require user accounts or registration</li>
+    <li>We do <strong>not</strong> share data with third parties for marketing purposes</li>
+    <li>We do <strong>not</strong> process data in the cloud (all processing happens on your device)</li>
+</ul>
+
+<h2>3. Data Stored Locally on Your Device</h2>
+<p>The following data is created and stored <strong>entirely on your device</strong> and never transmitted to us:</p>
+
+<h3>3.1 Video Recordings</h3>
+<p>Videos you record are stored in the App's private internal storage on your device. These files are not accessible to other apps and are automatically deleted based on your chosen retention settings (e.g., 7 days). You can manually delete any video at any time.</p>
+
+<h3>3.2 Unboxing Metadata</h3>
+<p>Information you enter or that is detected from shipping labels is stored in a local database on your device:</p>
+<ul>
+    <li>Retailer name (e.g., "Amazon")</li>
+    <li>Tracking number</li>
+    <li>Order number</li>
+    <li>Notes you add</li>
+    <li>Issue type and dispute status (if applicable)</li>
+    <li>Recording date, file size, and duration</li>
+</ul>
+
+<h3>3.3 App Settings</h3>
+<p>Your preferences (video quality, theme, retention period, notification settings) are stored locally using Android DataStore.</p>
+
+<h3>3.4 Device Identifier</h3>
+<p>The App generates a hashed device identifier using hardware properties (manufacturer, model, board) and Android's MediaDRM API. This identifier is:</p>
+<ul>
+    <li>Stored <strong>only on your device</strong> (in SharedPreferences)</li>
+    <li>A one-way SHA-256 hash (the original values cannot be recovered)</li>
+    <li>Used solely to prevent purchase abuse (e.g., buying premium, refunding, and retaining access)</li>
+    <li><strong>Never transmitted</strong> to us or any third party</li>
+</ul>
+
+<h2>4. Device Permissions</h2>
+<p>The App requests the following Android permissions:</p>
+
+<table>
+    <tr>
+        <th>Permission</th>
+        <th>Purpose</th>
+        <th>Required</th>
+    </tr>
+    <tr>
+        <td>Camera</td>
+        <td>Record unboxing videos</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Microphone</td>
+        <td>Capture audio during recording</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Notifications</td>
+        <td>Remind you before videos expire and when it's time to review an unboxing</td>
+        <td>Recommended</td>
+    </tr>
+    <tr>
+        <td>Boot Completed</td>
+        <td>Reschedule expiry check tasks after device restart</td>
+        <td>Automatic</td>
+    </tr>
+</table>
+
+<p>Camera and microphone data is used solely for recording and is stored only on your device. The App does not stream, upload, or transmit camera or microphone data.</p>
+
+<h2>5. On-Device Processing</h2>
+
+<h3>5.1 Barcode and Text Scanning</h3>
+<p>The App uses Google ML Kit's <strong>on-device</strong> barcode scanning and text recognition to read shipping labels. These ML models run entirely on your device. No images or scan results are sent to Google or any external server.</p>
+
+<h3>5.2 Video Processing</h3>
+<p>Video compression, speed adjustment, splitting, and watermarking are performed on your device using Android's built-in MediaCodec APIs. No video data leaves your device during processing.</p>
+
+<h2>6. Third-Party Services</h2>
+
+<h3>6.1 Google Play Billing</h3>
+<p>If you purchase the premium upgrade, the transaction is processed by Google Play. We receive confirmation of purchase status from Google Play but do not receive your payment details (credit card number, billing address, etc.). Google's privacy policy governs the purchase transaction: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+
+<h3>6.2 Google Play In-App Updates</h3>
+<p>The App checks for available updates through the Google Play In-App Updates API. This communicates with Google Play services on your device to determine if a newer version is available. No personal data is sent as part of this check.</p>
+
+<h3>6.3 No Other Third-Party Services</h3>
+<p>The App does not integrate any other third-party services, SDKs, or APIs. There is no Firebase, no analytics, no advertising, and no social media integration.</p>
+
+<h2>7. Data Sharing</h2>
+<p>The App includes export and sharing features that allow you to:</p>
+<ul>
+    <li>Save videos to your device's Downloads folder</li>
+    <li>Share videos via email or other apps</li>
+    <li>Export metadata as a PDF document</li>
+</ul>
+<p>These actions are initiated entirely by you and use Android's standard sharing mechanisms. We have no visibility into what you share or with whom.</p>
+
+<h2>8. Data Retention and Deletion</h2>
+<ul>
+    <li><strong>Automatic deletion:</strong> Videos are automatically deleted after the retention period you choose (e.g., 7 days).</li>
+    <li><strong>Manual deletion:</strong> You can delete any video at any time from within the App.</li>
+    <li><strong>Dispute videos:</strong> Videos marked as dispute evidence are protected from auto-deletion until you resolve the dispute.</li>
+    <li><strong>Uninstall:</strong> Uninstalling the App removes all locally stored data (videos, database, settings) from your device.</li>
+</ul>
+
+<h2>9. Children's Privacy</h2>
+<p>The App is not directed at children under the age of 13. We do not knowingly collect any personal information from children. Since the App does not collect personal information from any user, no special provisions are necessary.</p>
+
+<h2>10. Data Security</h2>
+<p>Since all data remains on your device:</p>
+<ul>
+    <li>Videos are stored in the App's private internal storage, inaccessible to other apps</li>
+    <li>The device identifier is stored as an irreversible SHA-256 hash</li>
+    <li>Premium purchase status is cached locally and periodically re-validated with Google Play</li>
+    <li>Your device's own security measures (lock screen, encryption) protect all App data</li>
+</ul>
+
+<h2>11. Your Rights</h2>
+<p>Since we do not collect or store any of your data on our servers, traditional data subject rights (access, portability, erasure requests) are not applicable. You have full control over all data through the App itself:</p>
+<ul>
+    <li>View all stored data within the App</li>
+    <li>Delete individual videos or all data at any time</li>
+    <li>Uninstall the App to remove all associated data</li>
+</ul>
+
+<h2>12. Changes to This Policy</h2>
+<p>We may update this privacy policy from time to time. Changes will be reflected in the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+<h2>13. Contact Us</h2>
+<p>If you have questions about this privacy policy, please contact us:</p>
+<p>📧 Email: <a href="mailto:essential.labs8@gmail.com">essential.labs8@gmail.com</a></p>
+
+<div class="footer">
+    <p>Unboxing App by Essential Labs</p>
+    <p>This privacy policy is effective as of February 14, 2025.</p>
+</div>
+
+</body>
+</html>
