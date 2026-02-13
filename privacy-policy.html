@@ -80,15 +80,6 @@
 <h3>3.3 App Settings</h3>
 <p>Your preferences (video quality, theme, retention period, notification settings) are stored locally using Android DataStore.</p>
 
-<h3>3.4 Device Identifier</h3>
-<p>The App generates a hashed device identifier using hardware properties (manufacturer, model, board) and Android's MediaDRM API. This identifier is:</p>
-<ul>
-    <li>Stored <strong>only on your device</strong> (in SharedPreferences)</li>
-    <li>A one-way SHA-256 hash (the original values cannot be recovered)</li>
-    <li>Used solely to prevent purchase abuse (e.g., buying premium, refunding, and retaining access)</li>
-    <li><strong>Never transmitted</strong> to us or any third party</li>
-</ul>
-
 <h2>4. Device Permissions</h2>
 <p>The App requests the following Android permissions:</p>
 
@@ -164,10 +155,9 @@
 <h2>10. Data Security</h2>
 <p>Since all data remains on your device:</p>
 <ul>
-    <li>Videos are stored in the App's private internal storage, inaccessible to other apps</li>
-    <li>The device identifier is stored as an irreversible SHA-256 hash</li>
-    <li>Premium purchase status is cached locally and periodically re-validated with Google Play</li>
-    <li>Your device's own security measures (lock screen, encryption) protect all App data</li>
+    <li>Videos are stored in the App&rsquo;s private internal storage, inaccessible to other apps</li>
+    <li>Premium purchase status is validated through Google Play</li>
+    <li>Your device&rsquo;s own security measures (lock screen, encryption) protect all App data</li>
 </ul>
 
 <h2>11. Your Rights</h2>
